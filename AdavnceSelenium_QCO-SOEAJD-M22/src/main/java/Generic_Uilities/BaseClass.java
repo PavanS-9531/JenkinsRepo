@@ -32,16 +32,17 @@ public class BaseClass {
 	}
 
 //	@Parameters("BROWSER")
+//	public void bc(String BROWSER ) throws Throwable
+	
 	@BeforeClass(groups = {"smoke","Regression","sanity"})
 	public void bc() throws Throwable {
-		File_Utility flib = new File_Utility();
-		String BROWSER = flib.getKeyAndValuePair("browser");
+//		File_Utility flib = new File_Utility();
+//		String BROWSER = flib.getKeyAndValuePair("browser");
+	
 		
-		//reading from cmd
-//		String BROWSER = System.getProperty("browser");
-
-//	public void bc(String BROWSER ) throws Throwable
-	{
+		//reading from cmd/Jenkins
+		String BROWSER = System.getProperty("browser");
+	
 		if (BROWSER.equalsIgnoreCase("chrome")) {
 			driver = new ChromeDriver();
 		} else if (BROWSER.equalsIgnoreCase("firefox")) {
@@ -54,7 +55,7 @@ public class BaseClass {
 		System.out.println("launching browser");
 		sdriver=driver;
 	}
-	}
+	
 //	@Parameters({"URL","USERNAME","PASSWORD"})
 	@BeforeMethod
 	public void bm() throws Throwable {
