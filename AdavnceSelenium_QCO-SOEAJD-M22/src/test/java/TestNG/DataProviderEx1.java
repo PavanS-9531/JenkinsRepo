@@ -6,6 +6,7 @@ import org.testng.annotations.Test;
 public class DataProviderEx1 {
 
 	//
+	//hello
 	@Test(dataProvider = "getData")
 	public void bookTickets(String src, String dest,int numOfPpl) {
 		System.out.println("Book Tickets from " + src + " to " + dest+","+numOfPpl+"");
