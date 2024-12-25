@@ -32,7 +32,6 @@ public class BaseClass {
 	}
 
 //	@Parameters("BROWSER")
-//	public void bc(String BROWSER ) throws Throwable
 	
 	@BeforeClass(groups = {"smoke","Regression","sanity"})
 	public void bc() throws Throwable {
@@ -43,6 +42,7 @@ public class BaseClass {
 		//reading from cmd/Jenkins
 	//	public void bc(String BROWSER ) throws Throwable
 	//	String BROWSER = System.getProperty("browser");
+
 	
 		if (BROWSER.equalsIgnoreCase("chrome")) {
 			driver = new ChromeDriver();
