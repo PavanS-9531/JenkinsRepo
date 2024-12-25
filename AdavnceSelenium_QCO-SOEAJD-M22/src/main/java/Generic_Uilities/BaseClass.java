@@ -32,14 +32,13 @@ public class BaseClass {
 	}
 
 //	@Parameters("BROWSER")
-//	public void bc(String BROWSER ) throws Throwable
 	
 	@BeforeClass(groups = {"smoke","Regression","sanity"})
 	public void bc() throws Throwable {
 //		File_Utility flib = new File_Utility();
 //		String BROWSER = flib.getKeyAndValuePair("browser");
-	
 		
+	//	public void bc(String BROWSER ) throws Throwable
 		//reading from cmd/Jenkins
 		String BROWSER = System.getProperty("browser");
 	
