@@ -40,7 +40,7 @@ public class BaseClass {
 	
 		
 		//reading from cmd/Jenkins
-		public void bc(String BROWSER ) throws Throwable
+		public void bc(String BROWSER ) throws Throwable{
 		String BROWSER = System.getProperty("browser");
 
 	
