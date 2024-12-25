@@ -34,14 +34,14 @@ public class BaseClass {
 //	@Parameters("BROWSER")
 	
 	@BeforeClass(groups = {"smoke","Regression","sanity"})
-	public void bc() throws Throwable {
-		File_Utility flib = new File_Utility();
-		String BROWSER = flib.getKeyAndValuePair("browser");
+//	public void bc() throws Throwable {
+	//	File_Utility flib = new File_Utility();
+	//	String BROWSER = flib.getKeyAndValuePair("browser");
 	
 		
 		//reading from cmd/Jenkins
-	//	public void bc(String BROWSER ) throws Throwable
-	//	String BROWSER = System.getProperty("browser");
+		public void bc(String BROWSER ) throws Throwable
+		String BROWSER = System.getProperty("browser");
 
 	
 		if (BROWSER.equalsIgnoreCase("chrome")) {
