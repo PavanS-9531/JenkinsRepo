@@ -20,7 +20,7 @@ import ObjectRepo.VtigerHomePage;
 public class BaseClass {
 	public WebDriver driver;
 	public static WebDriver sdriver;
-
+//
 	@BeforeSuite(groups = {"smoke","Regression","sanity"})
 	public void bs() {
 		System.out.println("DataBase connection");
@@ -36,12 +36,12 @@ public class BaseClass {
 	
 	@BeforeClass(groups = {"smoke","Regression","sanity"})
 	public void bc() throws Throwable {
-//		File_Utility flib = new File_Utility();
-//		String BROWSER = flib.getKeyAndValuePair("browser");
+		File_Utility flib = new File_Utility();
+		String BROWSER = flib.getKeyAndValuePair("browser");
 	
 		
 		//reading from cmd/Jenkins
-		String BROWSER = System.getProperty("browser");
+//		String BROWSER = System.getProperty("browser");
 	
 		if (BROWSER.equalsIgnoreCase("chrome")) {
 			driver = new ChromeDriver();
@@ -65,6 +65,7 @@ public class BaseClass {
 		String USERNAME = flib.getKeyAndValuePair("username");
 		String PASSWORD = flib.getKeyAndValuePair("password");
 		
+		//reading from cmd/Jenkins
 //		String URL = System.getProperty("url");
 //		String USERNAME = System.getProperty("username");
 //		String PASSWORD = System.getProperty("password");
